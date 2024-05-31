@@ -1,0 +1,11 @@
+ <?php
+    $host = "medical-database-0.mysql.database.azure.com";
+    $dbname = "medical-database-0";
+    $username = "medicinehelps";
+    $password = "Rheanna2023";
+    $port = 3306;
+    $mysqli = mysqli_init();
+    mysqli_ssl_set($mysqli, NULL, NULL, "./DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+    if (!$mysqli->real_connect($host, $username, $password, $dbname, $port, NULL, MYSQLI_CLIENT_SSL)) {
+        die("Connection error: " . $mysqli->connect_error);
+    }
