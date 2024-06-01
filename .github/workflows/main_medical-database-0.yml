@@ -69,7 +69,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'medical-database-0'
+          app-name: 'medical-database-1'
           slot-name: 'Production'
           package: .
           
